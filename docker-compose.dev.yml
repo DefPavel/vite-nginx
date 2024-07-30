@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  dev_front:
+    build:
+      context: ./app
+      target: development
+    volumes:
+      - .:/var/www/app
+      - /var/www/app/node_modules
+    ports:
+      - 3000:3000
+    command: npm run dev

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  prod_front:
+    build:
+      context: ./app
+      target: production
+    ports:
+      - '80:80'
