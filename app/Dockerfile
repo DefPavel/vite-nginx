@@ -15,3 +15,5 @@ FROM nginx:stable-alpine as production
 COPY --from=development /var/www/app/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+CMD ["nginx", "-g", "daemon off;"]
